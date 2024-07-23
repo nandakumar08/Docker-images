@@ -10,3 +10,5 @@ RUN git clone https://github.com/nandakumar08/my-website.git
 RUN rm -rf /usr/local/apache2/htdocs/index.html
 #This moves the cloned website files from their current location to the Apache document root directory (/usr/local/apache2/htdocs), making them accessible to the web server
 RUN mv /usr/local/apache2/my-website /usr/local/apache2/htdocs
+#
+RUN docker run -itd --name Nandakumar --p 555:80 my-website
