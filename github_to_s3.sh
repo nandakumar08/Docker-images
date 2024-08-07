@@ -2,7 +2,7 @@
 
 # Variables
 REPO_URL="https://github.com/nandakumar08/Docker-images.git"
-BRANCH="main"
+BRANCH="master"
 BUCKET_NAME="nandaproject"
 TEMP_DIR="repo"
 
