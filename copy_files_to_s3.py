@@ -5,11 +5,11 @@ import zipfile
 import io
 
 # Configuration
-GITHUB_REPO = 'https://github.com/username/repository/archive/refs/heads/main.zip'
-S3_BUCKET = 'my-github-files-bucket'
-AWS_ACCESS_KEY = 'YOUR_AWS_ACCESS_KEY'
-AWS_SECRET_KEY = 'YOUR_AWS_SECRET_KEY'
-AWS_REGION = 'YOUR_AWS_REGION'
+GITHUB_REPO = 'https://github.com/nandakumar08/Docker-images.git'
+S3_BUCKET = 'nandaproject'
+AWS_ACCESS_KEY = 'AKIAQEIP3RFFP65544GD'
+AWS_SECRET_KEY = '5VDJ93HWmSPDGk42CqFWoSeBH5WKu5W9h9VTx060'
+AWS_REGION = 'us-east-1'
 
 def download_github_repo(repo_url):
     response = requests.get(repo_url)
