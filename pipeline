@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    environment {
+        AWS_ACCESS_KEY_ID = credentials('aws-access-key-id')
+        AWS_SECRET_ACCESS_KEY = credentials('aws-secret-access-key')
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/USERNAME/REPO.git'
+            }
+        }
+        stage('Install AWS CLI') {
+            steps {
+                sh 'pip install awscli'
+            }
+        }
+        stage('Run Script') {
+            steps {
+                sh '''
+                #!/bin/bash
+                chmod +x github_to_s3.sh
+                ./github_to_s3.sh
+                '''
+            }
+        }
+    }
+}
